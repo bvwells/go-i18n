@@ -15,7 +15,8 @@ install:
   - go get -u golang.org/x/tools/cmd/goimports
   
 script:
- - ./test.sh
+ - go generate ./...
+ - go test -race -v ./...
  - go vet ./...
  - diff <(golint ./...) <(printf "")
 
