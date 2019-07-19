@@ -9,6 +9,7 @@ install:
   - echo %GOPATH%
   - go version
   - go env
+  - go get -u golang.org/x/text/cmd/gotext
 
 build_script:
  - go generate ./...
