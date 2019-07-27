@@ -4,7 +4,13 @@ os: Windows Server 2012 R2
 
 clone_folder: c:\github.com\bvwells\go-i18n
 
+environment:
+  GOPATH: C:\Users\appveyor\go
+  GO111MODULE: on
+
 install:
+  - set PATH=C:\msys64\mingw64\bin;%PATH%
+  - set PATH=%GOPATH%\bin;%PATH%
   - echo %PATH%
   - echo %GOPATH%
   - go version
