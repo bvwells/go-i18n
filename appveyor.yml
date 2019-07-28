@@ -19,6 +19,7 @@ install:
 
 build_script:
  - go generate ./...
+ - ls -R
  - go run main.go
 
 test_script:
