@@ -15,7 +15,6 @@ install:
   - go get -u golang.org/x/text/cmd/gotext
   
 script:
- - go generate
  - go run main.go
  - go test -race -v -coverprofile=coverage.txt -covermode=atomic ./...
  - go vet ./...
